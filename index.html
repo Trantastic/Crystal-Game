@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Crystal Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-	<header>
-		<h1>Crystal Game</h1>
-	</header>
-
-	<div id="targetValue"></div>
-
-	<div id="crystals"></div>
-
-	<div>
-		<p>Current Total:</p>
-		<p id="total"></p>
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="container">
+            <h1 class="display-4 text-center text-white">Crystal Game</h1>
+            <p class="text-center text-white">Each crystal has a hidden value. You win when your total matches the target value.
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Target value users must get to win -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div id="targetValue" class="card-body text-center bg-success text-white">
+                    </div>
+                </div>
+            </div>
+            <!-- Crystal Images -->
+            <div id="center" class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <div id="crystals" class="card-body text-center">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Current Total -->
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center bg-primary text-white">Current Total: <span id="total" class="text-center bg-primary text-white"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+    <!-- Scoreboard -->
+				<div id="left-align" class="card bg-warning" style="width: 22rem;">
+					<div class="card-body">
+						<p>Wins: <span id="wins"></span></p>
+				        <p>Losses: <span id="losses"></span></p>
+					</div>
+				</div>
+			</div>
 	</div>
 
-	<div>
-		<p>Wins: <span id="wins"></span></p>
-		<p>Losses: <span id="losses"></span></p>
-	</div>
-
-	<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>

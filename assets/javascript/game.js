@@ -34,15 +34,11 @@ $(document).ready(function() {
 		if(currentTotal === targetNumber) {
 			wins++;
 			document.querySelector("#wins").innerHTML = wins;
-			// var currentTotal = 0;
-			// var targetNumber = Math.floor(Math.random() * 120) + 19;
 		}
 
 		else if(currentTotal > targetNumber) {
 			losses++;
 			document.querySelector("#losses").innerHTML = losses;
-			// var currentTotal = 0;
-			// var targetNumber = Math.floor(Math.random() * 120) + 19;
 		}
 
 	});
