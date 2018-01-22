@@ -10,6 +10,8 @@ $(document).ready(function() {
 
     var randomValues = [];
 
+    var crystalOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
     randomizeCrystals();
     newValues();
     startGame();
@@ -42,15 +44,13 @@ $(document).ready(function() {
 
     function randomizeCrystals() {
         while(randomValues.length < crystalArray.length) {
-            var crystalOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-            
             crystalOptions.sort(function(a, b) {
                 return 0.5 - Math.random()
             });
             
             randomValues.push(crystalOptions.splice(0, 1));
+            console.log(crystalOptions);
         }
-       	console.log(crystalOptions);
     };
 
     function newValues() {
@@ -79,6 +79,7 @@ $(document).ready(function() {
             $("#total").html("0");
             $("#crystals").empty();
             randomValues = [];
+            crystalOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         }
 
     };
