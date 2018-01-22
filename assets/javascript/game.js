@@ -49,6 +49,7 @@ $(document).ready(function() {
             });
             
             randomValues.push(crystalOptions.splice(0, 1));
+            //to check if it's working
             console.log(crystalOptions);
         }
     };
@@ -64,7 +65,8 @@ $(document).ready(function() {
             imageCrystal.attr("src", crystalArray[i]);
 
             imageCrystal.attr("data-crystalvalue", randomValues[i]);
-
+            
+            //to check if it's working
             console.log(randomValues);
 
             $("#crystals").append(imageCrystal);
