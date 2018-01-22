@@ -26,7 +26,7 @@ $(document).ready(function() {
 
             if (currentTotal === targetNumber) {
                 wins++;
-                document.querySelector("#wins").innerHTML = wins;
+                $("#wins").html(wins);
                 reset();
                 randomizeCrystals();
                 newValues();
